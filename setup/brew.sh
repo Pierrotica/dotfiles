@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load utils
-. $HOME/doftiles/setup/utils.sh
+. $HOME/dotfiles/setup/utils.sh
 
 install_homebrew() {
 	print_title "Homebrew"
@@ -41,7 +41,7 @@ install_packages() {
 		peco sqlite mysql redis socat arp-scan scala leiningen cabal-install \
 		binary packer gauche
 	)
-	for package in "$(packages[@]}"; do
+	for package in "${packages[@]}"; do
 		if brew list "$package" > /dev/null 2>&1; then
 			print_warning "$package: already installed"
 		elif brew install $package > /dev/null 2>&1; then
