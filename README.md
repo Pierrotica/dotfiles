@@ -13,5 +13,7 @@ The setup list is this:
 - Install Homebrew
 - Install pachages
 - Install Casks
+- Create symbolic links
+- Change the login shell
 
 

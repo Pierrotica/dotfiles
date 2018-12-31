@@ -32,6 +32,7 @@ main () {
 	download_dotfiles
 	
 	. $DOTFILES_PATH/setup/install.sh
+	. $DOTFILES_PATH/setup/changeLoginShell.sh
 }
 main
 
