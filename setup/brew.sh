@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load utils
-. setup/utils.sh
+. $HOME/doftiles/setup/utils.sh
 
 install_homebrew() {
 	print_title "Homebrew"

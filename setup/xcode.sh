@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Load utils
-. setup/utils.sh
+. $HOME/dotfiles/setup/utils.sh
 
 print_title "XCode"
 
