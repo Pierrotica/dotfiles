@@ -10,10 +10,10 @@ install_homebrew() {
 	else
 		print_message "Installing Homebrew..."
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-		print success "successfully installed"
+		print_success "successfully installed"
 	fi
 
-	print_mesage "brew update..."
+	print_message "brew update..."
 	if brew update > /dev/null 2>&1; then
 		print_success "successfully updated"
 	else
