@@ -36,10 +36,10 @@ install_packages() {
 		openssl z ag lv nkf tree readline rmtrash xz binutils coreutils \
 		findutils proctools htop mobile-shell terminal-notifier \
 		git hub tig gibo python python3 mercurial rbenv ruby-build \
-		rbenv-defalut-gems imagemagick plenv perl-build lua \
-		luagit ctags cscope cmigemo source-highlight jq go ghq direnv \
-		peco sqlite mysql redis socat arp-scan scala leiningen cabal-install \
-		binary packer gauche
+		imagemagick plenv perl-build lua luagit ctags cscope cmigemo \
+		source-highlight jq go ghq direnv peco sqlite mysql redis \
+		socat arp-scan scala leiningen cabal-install binary packer \
+		gauche
 	)
 	for package in "${packages[@]}"; do
 		if brew list "$package" > /dev/null 2>&1; then
@@ -50,6 +50,7 @@ install_packages() {
 			print_error "$package: unsuccessfully installed"
 		fi
 	done
+	brew install --HEAD --with-gettext --with-override-system-vi
 }
 
 install_cask_packages() {

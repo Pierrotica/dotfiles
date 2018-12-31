@@ -18,7 +18,7 @@ create_links() {
 		[[ "$file" == "dein_lazy.toml" ]] && continue
 
 		ln -sfn $filepath $HOME/$file
-		print_success "$HOME/$file -> "$filepath"
+		print_success "$HOME/$file -> $filepath"
 	done
 	mkdir -p ~/.vim/dein
 	ln -sfn ${PWD}/dein.toml ~/.vim/dein/dein.toml
