@@ -10,5 +10,8 @@ bash -c "$(curl -LSs https://raw.githubusercontent.com/Pierrotica/dotfiles/maste
 The setup list is this:
 
 - Download dotfiles
+- Install Homebrew
+- Install pachages
+- Install Casks
 
 
