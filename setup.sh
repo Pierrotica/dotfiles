@@ -3,6 +3,14 @@
 # dotfiles path
 DOTFILES_PATH="$HOME/dotfiles"
 
+check_os() {
+	os_name="$(uname)"
+	if [ "$os_name" != "Darwin" ]; then
+		echo "Sorry, this script is intended only for macOS"
+		exit 1
+	fi
+}
+
 download_dotfiles() {
 	if [ -d $DOTFILES_PATH ]; then
 		echo "dotfiles: already exists"
@@ -19,6 +27,7 @@ download_dotfiles() {
 }
 
 main () {
+	check_os
 	download_dotfiles
 }
 main
