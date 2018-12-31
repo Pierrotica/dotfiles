@@ -30,7 +30,8 @@ download_dotfiles() {
 main () {
 	check_os
 	download_dotfiles
-	
+
+	. $DOTFILES_PATH/setup/symbolic_links.sh	
 	. $DOTFILES_PATH/setup/install.sh
 	. $DOTFILES_PATH/setup/changeLoginShell.sh
 }
