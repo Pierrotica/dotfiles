@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Load utils
-. setup/utils.sh
+. $HOME/dotfiles/setup/utils.sh
 
 change_login_shell() {
 	print_title "Zsh"

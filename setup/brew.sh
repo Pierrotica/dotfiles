@@ -34,7 +34,7 @@ install_packages() {
 	packages=(
 		wget curl zsh zsh-completions tmux reattach-to-user-namespace \
 		openssl z ag lv nkf tree readline rmtrash xz binutils coreutils \
-		findutils proctoolshtop mobile-shell terminal-notifier \
+		findutils proctools htop mobile-shell terminal-notifier \
 		git hub tig gibo python python3 mercurial rbenv ruby-build \
 		rbenv-defalut-gems imagemagick plenv perl-build lua \
 		luagit ctags cscope cmigemo source-highlight jq go ghq direnv \
