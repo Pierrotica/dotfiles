@@ -1,4 +1,5 @@
 #!/bin/bash
 
-. setup/xcode.sh
-. setup/brew.sh
+DOTFILES_PATH="$HOME/dotfiles"
+$DOTFILES_PATH/setup/xcode.sh
+$DOTFILES_PATH/setup/brew.sh
