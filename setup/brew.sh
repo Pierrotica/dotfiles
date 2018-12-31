@@ -36,11 +36,12 @@ install_packages() {
 		openssl z ag lv nkf tree readline rmtrash xz binutils coreutils \
 		findutils proctools htop mobile-shell terminal-notifier \
 		git hub tig gibo python python3 mercurial rbenv ruby-build \
-		imagemagick plenv perl-build lua luagit ctags cscope cmigemo \
+		imagemagick plenv perl-build lua luajit ctags cscope cmigemo \
 		source-highlight jq go ghq direnv peco sqlite mysql redis \
-		socat arp-scan scala leiningen cabal-install binary packer \
-		gauche
+		socat arp-scan scala leiningen cabal-install packer gauche binary \
+        rbenv-default-gems
 	)
+    brew tap homebrew/binary
 	for package in "${packages[@]}"; do
 		if brew list "$package" > /dev/null 2>&1; then
 			print_warning "$package: already installed"
