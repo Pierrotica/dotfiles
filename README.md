@@ -11,7 +11,7 @@ The setup list is this:
 
 - Download dotfiles
 - Install Homebrew
-- Install pachages
+- Install pachages[setup](setup.sh)
 - Install Casks
 - Create symbolic links
 - Change the login shell
