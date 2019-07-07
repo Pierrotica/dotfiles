@@ -17,7 +17,7 @@ source $VIMRUNTIME/defaults.vim
 " 分からないオプション名は先頭に ' を付けてhelpしましょう。例:
 " :h 'helplang
 
-packadd! vimdoc-ja                " 日本語help の読み込み
+"packadd! vimdoc-ja                " 日本語help の読み込み
 set helplang=ja,en                " help言語の設定
 
 set scrolloff=0
