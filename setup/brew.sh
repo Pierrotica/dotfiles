@@ -33,15 +33,14 @@ install_packages() {
 	print_message "Installing packages..."
 	packages=(
 		wget curl zsh zsh-completions tmux reattach-to-user-namespace \
-		openssl z ag lv nkf tree readline rmtrash xz binutils coreutils \
+		openssl z ag lv nkf tree readline xz binutils coreutils \
 		findutils proctools htop mobile-shell terminal-notifier \
 		git hub tig gibo python python3 mercurial rbenv ruby-build \
 		imagemagick plenv perl-build lua luajit ctags cscope cmigemo \
 		source-highlight jq go ghq direnv peco sqlite mysql redis \
-		socat arp-scan scala leiningen cabal-install packer gauche binary \
+		socat arp-scan scala leiningen cabal-install packer gauche \
         rbenv-default-gems
 	)
-    brew tap homebrew/binary
 	for package in "${packages[@]}"; do
 		if brew list "$package" > /dev/null 2>&1; then
 			print_warning "$package: already installed"
@@ -51,29 +50,22 @@ install_packages() {
 			print_error "$package: unsuccessfully installed"
 		fi
 	done
-	brew install --HEAD --with-gettext --with-override-system-vi
+	brew install vim --HEAD --with-gettext --with-override-system-vi
 }
 
 install_cask_packages() {
 	print_title "Homebrew Cask Packages"
-	print_message "Installing Cask..."
-	brew tap caskroom/cask
-	if brew install cask > /dev/null 2>&1; then
-		print_success "cask: successfully installed"
-	else
-		print_error "cask: unsuccessfully installed"
-	fi
 	packages=(
-		iterm2 virtualbox vagrant vagrant-manager filezilla \
+		iterm2 virtualbox vagrant vagrant-manager \
 		github xquartz wireshark firefox appcleaner alfred \
 		grandperspective steam qlcolorcode qlstephen qlmarkdown \
 		quicklook-json qlprettypatch quicklook-csv betterzipql \
 		webpquicklook suspicious-package link
 	)
 	for package in "${packages[@]}"; do
-		if brew cask list "$package" > /dev/null 2>&1; then
+		if brew list "$package" > /dev/null 2>&1; then
 			print_warning "$package: already installed"
-		elif brew cask install $package > /dev/null 2>&1; then
+		elif brew install $package > /dev/null 2>&1; then
 			print_success "$package: successfully installed"
 		else
 			print_error "$package: unsuccessfully installed"
